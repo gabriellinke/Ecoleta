@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt_br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoleta</title>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Para otimizar dependendo do tamanho da tela do dispositivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecoleta</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <!-- Importar as fontes do google.fonts - esse link está na página -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
+        <!-- Utilizar o style do arquivo main.css -->
+        <link rel="stylesheet" href="/styles/main.css">
+    </head>
 
-<body>
-
-    <div id="page-home"> 
-
-        <div class="content">
-
-            <header>
-                <img src="/assets/icones/logo.svg" alt="Ecoleta">
-                <a href="#">
-                    <span></span>
-                    Cadastre um ponto de coleta
-                </a>
-            </header>
-    
-            <main>
-  
-                <h1>Seu marketplace de coleta de resíduos</h1>
-    
-                <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
+    <body>
         
-                <a href="#">
-                    <span></span>
-                    <strong>Pesquisar pontos de coleta</strong></a>
+        <!-- Cria um ID  utilizado para agrupar elementos para fins de estilos -->
+        <div id="page-home"> 
 
-            </main>
-    
+            <!-- Classe que vai conter o conteúdo da homepage -->
+            <div class="content">
+
+                <!-- Header da página, com logo e link para cadastro -->
+                <header>
+                    <!-- Utiliza a imagem da logo, para questão de acessibilidade ou de erro ao carregar a imagem, usa-se o alt para substituir a logo -->
+                    <img src="/assets/icones/logo.svg" alt="Ecoleta">
+                    <!-- Link para realizar o cadastro de pontos. O span é utilizado para adicionar uma imagem antes do texto -->
+                    <!-- O elemento HTML <span> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. -->
+                    <!-- a tag <a> é utilizada para fazer links -->
+                    <a href="#">
+                        <span></span>
+                        Cadastre um ponto de coleta
+                    </a>
+                </header>
+
+                <!-- Conteúdo principal da homepage -->
+                <main>
+
+                    <!-- Título -->
+                    <!-- A h1 é uma tag HTML que indica um título. Pode ir de h1 até h6, sendo h1 o maior tamanho e h6 o menor -->
+                    <h1>Seu marketplace de coleta de resíduos</h1>
+        
+                    <!-- Texto -->
+                    <!--  a tag <p> representa um parágrafo do texto -->
+                    <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
+            
+                    <!-- Link para pesquisar os pontos. Utiliza <span> para a imagem e <strong> para o texto, que já fica em negrito -->
+                    <!-- a tag <strong> é muito parecida com a <bold>, porém <strong> pode ser interpretado por outros programas como leitores de páginas para surdo lendo o texto de forma diferente. -->
+                    <a href="#">
+                        <span></span>
+                        <strong>Pesquisar pontos de coleta</strong></a>
+
+                </main>
+
+            </div>
+
         </div>
 
-    </div>
-
-
-</body>
+    </body>
 
 </html>
