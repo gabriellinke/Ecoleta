@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- Para otimizar dependendo do tamanho da tela do dispositivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criar ponto de coleta</title>
+
+        <!-- Importar as fontes do google.fonts - esse link está na página -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+        <!-- Utilizar os styles -->
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/create_point.css">
+        <link rel="stylesheet" href="/styles/responsive.css">
+        
+    </head>
+
+    <body>
+        
+        <!-- Cria um ID  utilizado para agrupar elementos para fins de estilos -->
+        <div id="page-create_point"> 
+
+                <!-- Header da página, com logo e botão para voltar -->
+                <header>
+                    <!-- Utiliza a imagem da logo, para questão de acessibilidade ou de erro ao carregar a imagem, usa-se o alt para substituir a logo -->
+                    <img src="/assets/logo.svg" alt="Ecoleta">
+                    <!-- Link para realizar o cadastro de pontos. O span é utilizado para adicionar uma imagem antes do texto -->
+                    <!-- O elemento HTML <span> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. -->
+                    <!-- a tag <a> é utilizada para fazer links -->
+                    <a href="#">
+                        <span></span>
+                        Voltar para a home
+                    </a>
+                </header>
+
+                <!-- O FORM submete os dados de entrada do usuário a um programa que se encarregará do processamento desses dados, de acordo com o interesse do criador do documento. -->
+                <form>
+
+                    <h1>Cadastro de ponto de coleta</h1>
+
+                    <!-- é como se fosse uma div, porém, significa que vai ter campos de preenchimento dentro dela, pra organizar -->
+                    <fieldset>
+                        
+                        <!-- O elemento <legend> representa um rótulo para o conteúdo do seu ancestral <fieldset> -->
+                        <legend>
+                            <h2>Dados da entidade</h2>
+                        </legend>
+
+                        <!-- Classe utilizada para estilização dos campos utilizados para entrada de dados -->
+                        <div class="field">
+
+                            <!-- label para o input do nome da entidade -->
+                            <label for="name">
+                                Nome da entidade
+                            </label>
+                            <input type="text" name="name">
+
+                        </div>
+
+                        <!-- Classe utilizada para estilizar um grupo de fields -->
+                        <div class="field-group">
+
+                            <div class="field">
+
+                                <!-- label para o input do nome do endereço -->
+                                <label for="address">
+                                    Endereço
+                                </label>
+                                <input type="text" name="address">
+
+                            </div>
+
+                            <div class="field">
+                                
+                                <!-- label para o input do número -->
+                                <label for="address2">
+                                    Número/Complemento
+                                </label>
+                                <input type="text" name="address2">
+
+                            </div>
+
+                        </div>
+
+                        
+                        <div class="field-group">
+
+                            <div class="field">
+
+                                <label for="state">
+                                    Estado
+                                </label>
+
+                                <!-- Uma caixa para seleção do estado -->
+                                <select name="uf" id="">
+                                    <option value="">
+                                        Selecione o estado
+                                    </option>
+                                </select>   
+
+                                <!-- Vai ser utilizado no script para guardar o nome do estado e passar para o BD, pois se passar o select vai estar passando o ID do estado -->
+                                <input type="hidden", name="state">
+
+                            </div>
+
+                            <div class="field">
+                                
+                                <label for="city">
+                                    Cidade
+                                </label>
+
+                                <!-- Uma caixa para seleção da cidade -->
+                                <select name="city" id="" disabled>
+                                    <option value="">
+                                        Selecione a cidade
+                                    </option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                    <!-- <fieldset>
+                        
+                        <legend>
+                            <h2>Itens de coleta</h2>
+                        </legend>
+
+                    </fieldset> -->
+
+                    <!-- Botão utilizado para enviar os dados do formulário -->
+                    <button type="submit">Cadastrar ponto de coleta</button>
+
+                </form>
+
+        </div>
+
+        <!-- Script que vai carregar as opções de estado e de cidade no form -->
+        <script src="/scripts/create_point.js"></script>
+    </body>
+
+</html>

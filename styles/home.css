@@ -1,0 +1,156 @@
+#page-home
+{
+    /* significa que vai utilizar 100% da altura da janela de exibição */
+    height: 100vh;
+    /* define a imagem do background - no-repeat para adicionar apenas uma vez */
+    background: url('../assets/home-background.svg') no-repeat;
+    /* posição em x e y  da imagem*/
+    background-position: 35vw bottom;
+}
+
+#page-home .content
+{
+    /* deixa a box de conteúdo ocupando 1100 pixels. Caso a janela tenha menos de 1100 pixels, a box ocupa 90% dela */
+    width: 90%;
+    max-width: 1100px;
+
+    /* deixa o ajuste de todas as margens automático */
+    margin: 0 auto;
+    /* usa 100% da altura da tela */
+    height: 100%;
+    /* organiza os elementos em colunas */
+    display: flex;
+    flex-direction: column;
+}
+
+#page-home header
+{
+    margin-top: 48px;
+
+    /* alinha as boxes no centro e cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final. */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page-home header a
+{
+    display: flex;
+
+    /* muda a cor da fonte e deixa ela mais grossa, como se fosse um negrito */
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+#page-home header a span
+{
+    display: flex;
+    /* margem para o texto que está a direita */
+    margin-right: 16px;
+
+    /* imagem da <span> */
+    background-image: url('../assets/log-in.svg');
+
+    /* tamanho da imagem */
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main
+{
+    /* largura máxima ocupada pelo conteúdo da main */
+    max-width: 560px;
+
+    /* flex 1: Define flex-grow: 1; flex-shrink: 1; e flex-basis: 0*/
+    /* flex-shrink 1: permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container. */
+    /* flex-basis 0: Se o grow for igual ou maior que 1, ele irá tentar manter todos os elementos com a mesma largura, independente do conteúdo */
+    /* flex-grow 1:  Os itens se expandem igualmente para ocupar o container. Utilizando apenas o flex-grow, o crescimento é distribuído igualmente antes e depois do conteúdo de cada elemento */
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#page-home main h1
+{
+    font-size: 54px;
+}
+
+#page-home main p
+{
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home main a
+{
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+
+    /* arredonda a borda do botão */
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    /* margem para o texto acima */
+    margin-top: 40px;
+
+    /* cor de fundo */
+    background: var(--primary-color);
+
+    /* cor da fonte */
+    color: white;
+    font-weight: bold;
+
+    /* tempo para transição de cor quando passar o mouse por cima */
+    transition: 400ms;
+}
+
+/* muda a cor do botão quando o mouse passa por cima */
+#page-home main a:hover
+{
+    background-color: var(--hover-color);
+}
+
+/* imagem do botão */
+#page-home main a span
+{
+    width: 72px;
+    height: 72px;
+
+    /* arredonda a borda */
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    /* define a cor de fundo como preta com um alfa pequeno, assim vai ficar com a mesma cor do botão só que um pouco mais escura */
+    background-color: rgba(0,0,0,0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* usado pra colocar um conteúdo no span, no caso uma imagem de fundo */
+/* Em CSS, ::after cria um pseudo-elemento que é o último filho do elemento selecionado.
+   Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade content. É inline por padrão. */
+#page-home main a span::after
+{
+    content: "";
+    background-image: url(../assets/search.svg);
+
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main a strong
+{
+    flex: 1;
+    text-align: center;
+    color: white;
+}

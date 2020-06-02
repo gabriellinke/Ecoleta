@@ -1,0 +1,58 @@
+ 
+/* Media queries can be used to check many things, such as:
+
+width and height of the viewport
+width and height of the device
+orientation (is the tablet/phone in landscape or portrait mode?)
+resolution
+ */
+ 
+ /* Com a largura de 0 a 900px, aplica-se essa regra ao css */
+ @media (max-width: 900px)
+ {
+     #page-home 
+     {
+         /* tira a imagem da tela */
+         background-position: 70vw;
+     }
+ 
+     #page-home .content
+     {
+         align-items: center;
+         text-align: center;
+     }
+ 
+     #page-home header a
+     {
+         /* posiciona o link 48px da margem inferior */
+         position: absolute;
+         bottom: 48px;
+ 
+         /* para alinhar no centro */
+         left: 50%;
+         transform: translateX(-50%);
+     }
+ 
+     #page-home main
+     {
+         align-items: center;
+     }
+ }
+
+ /* acima de 1700px */
+ @media(min-width: 1700px)
+ {
+    #page-home
+    {
+        background-position: 45vw;
+    }
+ }
+
+ /* de 0 a 760px */
+ @media(max-height: 760px)
+ {
+    #page-home
+    {
+        background-position-y: 200px;
+    }
+ }

@@ -1,0 +1,167 @@
+#page-create_point
+{
+    width: 90%;
+    max-width: 1100px;
+
+    /* alinhamento de caixa pelo lado de fora */
+    /* margem superior e inferior = 0 e dos lados são automaticamente ajustadas, sendo assim cada lado tem a mesma marge */
+    margin: 0 auto;
+}
+
+#page-create_point header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 48px;
+}
+
+/* Voltar para a home */
+#page-create_point header a
+{
+    color: var(--title-color);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+}
+
+/* Imagem ao lado de Voltar para a home */
+#page-create_point header a span
+{
+    background-image: url('../assets/arrow-left.svg');
+
+    display: flex;
+
+    width: 20px;
+    height: 22px;
+
+    margin-right: 16px;
+}
+
+form
+{
+    background-color: white;
+    
+    /* Cria uma margem de 80px em cima e embaixo e deixa as margens laterais iguais, sendo ajustadas automaticamente */
+    margin: 80px auto;
+
+    /* preenchimento */
+    /* Distância interna do conteúdo para a margem */
+    padding: 64px;
+
+    border-radius: 8px;
+
+    /* Limitar a largura pra deixar mais bonito */
+    max-width: 720px;
+
+}
+
+form h1
+{
+    font-size: 36px;
+}
+
+form fieldset
+{
+    /* Distância que o fieldset vai estar do título do formulário */
+    margin-top: 64px;
+
+    /* Pra tirar uma bordinha que fica ao redor */
+    border: 0; 
+}
+
+form legend
+{
+    /* Margem do subtítulo "Dados da entidade" para os fields */
+    margin-bottom: 40px;
+}
+
+form legend h2
+{
+    font-size: 24px;
+}
+
+form .field
+{
+    /* flex 1 faz os fields ocuparem a linha inteira, e não somente o que ocupariam com o seu tamanho */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    /* Para ter uma distância entre os fields */
+    margin-bottom: 24px;
+}
+
+form .field-group
+{
+    /* Pra poder deixar os fields ficarem um do lado do outro */
+    display: flex;
+}
+
+/* Deixa tanto o input quanto o select com esse style */
+form input,
+form select
+{
+    background-color: #f0f0f5;
+
+    /* Tira as bordas que tem ao redor */
+    border: 0;
+
+    /* Aumenta o tamanho dos campos para input/select */
+    padding: 16px 24px;
+    font-size: 16px;
+
+    /* quando seleciona o campo ficava uma linha ao redor */
+    outline: none;
+
+    border-radius: 8px;
+
+}
+
+form select
+{
+    /* resetar a aparência padrão - usa os 3 pra aplicar em mais tipos de navegadores */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Escrita em cima dos campos para input */
+form label
+{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* pego o field que está ao lado de outro field */
+form .field-group .field + .field
+{
+    margin-left: 24px;
+}
+
+form button
+{
+    width: 260px;
+    height: 56px;
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    border: 0;
+
+    margin-top: 40px;
+    /* Para deixar o efeito de hover mais suave */
+    transition: background-color 400ms;
+}
+
+/* Muda a cor ao passar o mouse por cima */
+form button:hover
+{
+    background-color: var(--hover-color);
+}
