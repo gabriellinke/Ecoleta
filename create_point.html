@@ -29,7 +29,7 @@
                     <!-- Link para realizar o cadastro de pontos. O span é utilizado para adicionar uma imagem antes do texto -->
                     <!-- O elemento HTML <span> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. -->
                     <!-- a tag <a> é utilizada para fazer links -->
-                    <a href="#">
+                    <a href="/index.html">
                         <span></span>
                         Voltar para a home
                     </a>
@@ -55,7 +55,7 @@
                             <label for="name">
                                 Nome da entidade
                             </label>
-                            <input type="text" name="name">
+                            <input type="text" name="name" required>
 
                         </div>
 
@@ -68,7 +68,7 @@
                                 <label for="address">
                                     Endereço
                                 </label>
-                                <input type="text" name="address">
+                                <input type="text" name="address" required>
 
                             </div>
 
@@ -78,7 +78,7 @@
                                 <label for="address2">
                                     Número/Complemento
                                 </label>
-                                <input type="text" name="address2">
+                                <input type="text" name="address2" required>
 
                             </div>
 
@@ -94,7 +94,7 @@
                                 </label>
 
                                 <!-- Uma caixa para seleção do estado -->
-                                <select name="uf" id="">
+                                <select name="uf" id="" required>
                                     <option value="">
                                         Selecione o estado
                                     </option>
@@ -112,7 +112,7 @@
                                 </label>
 
                                 <!-- Uma caixa para seleção da cidade -->
-                                <select name="city" id="" disabled>
+                                <select name="city" id="" disabled required>
                                     <option value="">
                                         Selecione a cidade
                                     </option>
@@ -124,13 +124,42 @@
 
                     </fieldset>
 
-                    <!-- <fieldset>
+                    <fieldset>
                         
                         <legend>
                             <h2>Itens de coleta</h2>
                         </legend>
 
-                    </fieldset> -->
+                        <div class="items-grid">
+                            <li data-id="1">
+                                <img src="/assets/lampadas.svg" alt="Lâmpadas"></img>
+                                <span>Lâmpadas</span>
+                            </li>
+                            <li data-id="2">
+                                <img src="/assets/baterias.svg" alt="Pilhas e Baterias"></img>
+                                <span>Pilhas e baterias</span>
+                            </li>
+                            <li data-id="3">
+                                <img src="/assets/papeis-papelao.svg" alt="Papeis e Papelão"></img>
+                                <span>Papeis e papelão</span>
+                            </li>
+                            <li data-id="4">
+                                <img src="/assets/eletronicos.svg" alt="Resíduos Eletrônicos"></img>
+                                <span>Eletrônicos</span>
+                            </li>
+                            <li data-id="5">
+                                <img src="/assets/organicos.svg" alt="Resíduos Orgânicos"></img>
+                                <span>Resíduos Orgânicos</span>
+                            </li>
+                            <li data-id="6">
+                                <img src="/assets/oleo.svg" alt="Óleo de cozinha"></img>
+                                <span>Óleo de cozinha</span>
+                            </li>
+                        </div>
+
+                        <input type="hidden" name="items">
+
+                    </fieldset>
 
                     <!-- Botão utilizado para enviar os dados do formulário -->
                     <button type="submit">Cadastrar ponto de coleta</button>

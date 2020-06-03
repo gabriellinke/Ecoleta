@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- Para otimizar dependendo do tamanho da tela do dispositivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resultado da pesquisa</title>
+
+        <!-- Importar as fontes do google.fonts - esse link está na página -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+        <!-- Utilizar os styles -->
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/search-results.css">
+        <link rel="stylesheet" href="/styles/responsive.css">
+        
+    </head>
+
+    <body> 
+        <!-- Cria um ID  utilizado para agrupar elementos para fins de estilos -->
+        <div id="page-search-results"> 
+
+                <!-- Header da página, com logo e botão para voltar -->
+                <header>
+                    <!-- Utiliza a imagem da logo, para questão de acessibilidade ou de erro ao carregar a imagem, usa-se o alt para substituir a logo -->
+                    <img src="/assets/logo.svg" alt="Ecoleta">
+                    <!-- Link para realizar o cadastro de pontos. O span é utilizado para adicionar uma imagem antes do texto -->
+                    <!-- O elemento HTML <span> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. -->
+                    <!-- a tag <a> é utilizada para fazer links -->
+                    <a href="/index.html">
+                        <span></span>
+                        Voltar para a home
+                    </a>
+                </header>
+
+                <main>
+
+                    <h4><strong>2 pontos</strong> encontrados</h4>
+
+                    <div class="cards">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1101&q=80" alt="Colectoria">
+                            <h1>Colectoria</h1>
+                            <h3>Resíduos eletrônicos, lâmpadas</h3>
+                            <p>
+                                Rio do Sul, Santa Catarina<br/>
+                                Guilherme Gemballa, Jardim América <br/>
+                                Nº 260
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Papersider">
+                            <h1>Papersider</h1>
+                            <h3>Papeis e Papelão</h3>
+                            <p>
+                                Rio do Sul, Santa Catarina<br/>
+                                Guilherme Gemballa, Jardim América <br/>
+                                Nº 260
+                            </p>
+                        </div>
+                    </div>
+
+                </main>
+
+        </div>
+    </body>
+</html>

@@ -165,3 +165,57 @@ form button:hover
 {
     background-color: var(--hover-color);
 }
+
+.items-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 16px;
+}
+
+.items-grid li
+{
+    background-color: #f5f5f5;
+    list-style: none;
+
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+    height: 180px;
+
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+
+    /* Fazer a mãozinha de clique */
+    cursor: pointer;
+}
+
+.items-grid li span
+{
+    margin-top: 12px;
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+}
+
+/* li da classe selected */
+.items-grid li.selected
+{
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span
+{
+    /* Pra não acontecer o clique em cima da imagem ou do texto, vai ser considerado no item o clique */
+    pointer-events: none;
+}

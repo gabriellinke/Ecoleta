@@ -46,6 +46,10 @@ function getCities(event)
     const ufValue = event.target.value
     const url = ` https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`
 
+    // Quando for carregar as cidades vai limpar o que tem atualmente e bloquear a escolha.
+    citySelect.innerHTML = "<option value>Selecione a cidade</option>"
+    citySelect.disabled = true
+
     // Busca os dados na url
     fetch(url)
     .then( res => res.json() )
@@ -54,7 +58,8 @@ function getCities(event)
         // Cria uma opção com cada cidade
         for(const city of cities)
         {
-            citySelect.innerHTML += `<option value = "${city.id}">${city.nome}</option>`
+            // Quando confirmar vai mandar o nome da cidade, pois é o que está no value. O estado precisa enviar por input hidden porque o value precisa ter o id para carregar a cidade
+            citySelect.innerHTML += `<option value = "${city.nome}">${city.nome}</option>`
         }
 
         // Habilita a seleção de cidades
@@ -69,3 +74,54 @@ populateUFs()
 document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)
+
+
+// ITENS DE COLETA
+
+const itemsToCollect = document.querySelectorAll(".items-grid li")
+
+for(const item of itemsToCollect)
+{
+    item.addEventListener("click", handleSelectedItem)
+}
+
+//input hidden
+const collectedItems = document.querySelector("input[name=items]")
+
+// vetor
+let selectedItems = []
+
+function handleSelectedItem(event)
+{
+    const itemLi = event.target
+    const itemId = itemLi.dataset.id
+
+    // Se tiver selected remove, senão adiciona. Existe o add() e o remove() também
+    itemLi.classList.toggle("selected")
+    
+    // .findIndex( item => item == itemId )
+    const alreadySelected = selectedItems.findIndex(function(item){
+        return item == itemId //itemFound, retorna se encontrou ou não o item
+    })
+
+    // Se o item já está selecionado, precisa tirar a seleção
+    if(alreadySelected >= 0)
+    {
+        // filter(): Cria um array com os itens que passaram pelo teste definido por uma função
+        // Cria o vetor filteredItems que vai conter todos os valores que tinham no selectedItems, menos o que for == a itemId
+        const filteredItems = selectedItems.filter( item => {
+            const itemIsDifferent = item != itemId // Se for falso, é o item que tem o Id que precisa ser tirado do selectedItems
+            return itemIsDifferent
+        })
+
+        selectedItems = filteredItems   // SelectedItems vai receber os itens filtrados, que vão ter tirado o item que estava selecionado e foi clicado
+    }
+    else    //Se o item não está selecionado, precisa ser selecionado
+    {
+        selectedItems.push(itemId) // Então, bota o item no vetor de itens selecionados
+    }
+
+    collectedItems.value = selectedItems
+}
+
+

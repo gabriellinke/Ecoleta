@@ -37,6 +37,12 @@ resolution
      {
          align-items: center;
      }
+
+
+     #page-search-results .cards
+     {
+         grid-template-columns: 1fr;
+     }
  }
 
  /* acima de 1700px */
