@@ -45,6 +45,34 @@ resolution
      }
  }
 
+@media (max-width: 690px)
+{
+    #page-create_point form .field-group
+    {
+        flex-direction: column;
+    }
+
+    #page-create_point form .field-group .field + .field
+    {
+        margin-left: 0;
+    }
+
+    #page-create_point .items-grid
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 430px)
+{
+    #page-create_point .items-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+}
+
  /* acima de 1700px */
  @media(min-width: 1700px)
  {
