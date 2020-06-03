@@ -1,20 +1,24 @@
 #modal
 {
+    /* Para o modal utilizar 100% da tela */
     height: 100vh;
     width: 100vw;
     background-color: #0e0a14ef;
 
     position: fixed;
 
+    /* Ser fixado no topo da tela */
     top: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
+    /* Transição pra quando for aberto */
     transition: 400ms;
 }
 
+/* Caixa que vai ter o conteúdo */
 #modal .content
 {
     color: white;
@@ -97,6 +101,7 @@
     background-color: var(--hover-color);
 }
 
+/* Quando o modal estiver pertencendo à classe hide ele não vai mostrar nada do seu conteúdo */
 #modal.hide
 {
     display: none;

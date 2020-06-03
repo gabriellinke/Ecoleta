@@ -130,6 +130,8 @@
                             <h2>Itens de coleta</h2>
                         </legend>
 
+                        <!-- Cria uma lista de Itens. Cada item tem uma imagem e uma descrição, além de ter um "data" do tipo id,
+                        que vai servir para enviar os dados de que item está selecionado para o backend. Esses dados serão eniados pelo input hidden -->
                         <div class="items-grid">
                             <li data-id="1">
                                 <img src="/assets/lampadas.svg" alt="Lâmpadas"></img>
@@ -157,6 +159,7 @@
                             </li>
                         </div>
 
+                        <!-- hidden input que vai servir para enviar os itens que estão selecionados para o backend -->
                         <input type="hidden" name="items">
 
                     </fieldset>

@@ -77,15 +77,16 @@ document
 
 
 // ITENS DE COLETA
-
+// Seleciona todos os itens da lista (O All serve pra quando for selecionar uma lista de elementos)
 const itemsToCollect = document.querySelectorAll(".items-grid li")
 
+// Adicionar um clicklistener para todos os itens
 for(const item of itemsToCollect)
 {
     item.addEventListener("click", handleSelectedItem)
 }
 
-//input hidden
+//input hidden para salvar os itens selecionados
 const collectedItems = document.querySelector("input[name=items]")
 
 // vetor
@@ -96,7 +97,7 @@ function handleSelectedItem(event)
     const itemLi = event.target
     const itemId = itemLi.dataset.id
 
-    // Se tiver selected remove, senão adiciona. Existe o add() e o remove() também
+    // Se tiver selected remove, senão, adiciona. Existe o add() e o remove() também
     itemLi.classList.toggle("selected")
     
     // .findIndex( item => item == itemId )
@@ -121,6 +122,7 @@ function handleSelectedItem(event)
         selectedItems.push(itemId) // Então, bota o item no vetor de itens selecionados
     }
 
+    // Adiciona os itens ao hidden input
     collectedItems.value = selectedItems
 }
 

@@ -166,29 +166,35 @@ form button:hover
     background-color: var(--hover-color);
 }
 
+/* dispor os elementos em forma de grade */
 .items-grid
 {
     display: grid;
+    /* Divide em 3 colunas que tem seu tamanho calculado em razão da fração da div. Pode ter a entrada do tamanho em pixel também*/
     grid-template-columns: 1fr 1fr 1fr ;
+    /* gap é utilizado em display do tipo grip. É a margem que fica entre os elementos. Como se fosse a espessura das grades */
     gap: 16px;
 }
 
 .items-grid li
-{
+{  
+    /* Deixar cor de fundo e tirar o pontinho de lista*/
     background-color: #f5f5f5;
     list-style: none;
 
+    /* Fazer uma borda, nesse caso não mudou nada porque a cor é a mesma */
     border: 2px solid #f5f5f5;
     border-radius: 8px;
-    height: 180px;
 
+    /* Configurar o tamanho dos itens */
+    height: 180px;
     padding: 32px 24px 16px;
 
+    /* Para organizar a imagem e o texto do item. Deixa eles em coluna, com espaço entre eles e alinhados */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
     text-align: center;
 
     /* Fazer a mãozinha de clique */
@@ -199,6 +205,7 @@ form button:hover
 {
     margin-top: 12px;
 
+    /* Fazer o texto ocupar o resto do espaço do li que a imagem não ocupa  */
     flex: 1;
     display: flex;
     align-items: center;
@@ -209,6 +216,7 @@ form button:hover
 /* li da classe selected */
 .items-grid li.selected
 {
+    /* Quando o item for selecionado muda a cor de fundo e da borda */
     background: #e1faec;
     border: 2px solid #34cb79;
 }
@@ -216,6 +224,6 @@ form button:hover
 .items-grid li img,
 .items-grid li span
 {
-    /* Pra não acontecer o clique em cima da imagem ou do texto, vai ser considerado no item o clique */
+    /* Pra não acontecer o clique em cima da imagem ou do texto, vai ser considerado que o clique foi dado no item */
     pointer-events: none;
 }
