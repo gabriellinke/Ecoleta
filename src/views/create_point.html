@@ -6,6 +6,7 @@
 
 {% block styles %}
     <link rel="stylesheet" href="/styles/create_point.css">
+    <link rel="stylesheet" href="/styles/modal.css">
 {% endblock styles %}
 
 {% set pageId = "page-create_point" %}
@@ -15,7 +16,8 @@
     {% include "partials/page-header.html" %}
 
     <!-- O FORM submete os dados de entrada do usuário a um programa que se encarregará do processamento desses dados, de acordo com o interesse do criador do documento. -->
-    <form>
+    {# o method padrão é o GET, porém vamos mudar pra POST pra poder esconder os dados #}
+    <form action="/savepoint", method="POST">
 
         <h1>Cadastro de ponto de coleta</h1>
 
@@ -122,28 +124,28 @@
 
             <!-- Cria uma lista de Itens. Cada item tem uma imagem e uma descrição, além de ter um "data" do tipo id, que vai servir para enviar os dados de que item está selecionado para o backend. Esses dados serão eniados pelo input hidden -->
             <div class="items-grid">
-                <li data-id="1">
-                    <img src="/assets/lampadas.svg" alt="Lâmpadas"></img>
+                <li data-id="Lâmpadas">
+                    <img src="/assets/lampadas.svg" alt="Lâmpadas">
                     <span>Lâmpadas</span>
                 </li>
-                <li data-id="2">
-                    <img src="/assets/baterias.svg" alt="Pilhas e Baterias"></img>
+                <li data-id="Pilhas e baterias">
+                    <img src="/assets/baterias.svg" alt="Pilhas e Baterias">
                     <span>Pilhas e baterias</span>
                 </li>
-                <li data-id="3">
-                    <img src="/assets/papeis-papelao.svg" alt="Papeis e Papelão"></img>
+                <li data-id="Papeis e papelão">
+                    <img src="/assets/papeis-papelao.svg" alt="Papeis e Papelão">
                     <span>Papeis e papelão</span>
                 </li>
-                <li data-id="4">
-                    <img src="/assets/eletronicos.svg" alt="Resíduos Eletrônicos"></img>
+                <li data-id="Eletrônicos">
+                    <img src="/assets/eletronicos.svg" alt="Resíduos Eletrônicos">
                     <span>Eletrônicos</span>
                 </li>
-                <li data-id="5">
-                    <img src="/assets/organicos.svg" alt="Resíduos Orgânicos"></img>
+                <li data-id="Resíduos Orgânicos">
+                    <img src="/assets/organicos.svg" alt="Resíduos Orgânicos">
                     <span>Resíduos Orgânicos</span>
                 </li>
-                <li data-id="6">
-                    <img src="/assets/oleo.svg" alt="Óleo de cozinha"></img>
+                <li data-id="Óleo de cozinha">
+                    <img src="/assets/oleo.svg" alt="Óleo de cozinha">
                     <span>Óleo de cozinha</span>
                 </li>
             </div>
@@ -159,6 +161,12 @@
     </form>
 
 {% endblock content %}
+
+{% block modal %}
+    {% if saved %}
+        {% include "partials/point-created.html" %}
+    {% endif %}
+{% endblock modal %}
 
 {% block scripts %}
     <script src="/scripts/create_point.js"></script>
