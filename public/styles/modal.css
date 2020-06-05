@@ -120,3 +120,21 @@
     color: white;
     margin-top: 32px;
 }
+
+#modal.error .content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal.error h1
+{
+    color: white;
+}
+
+#modal.error img
+{
+    height: 64px;
+    width: 64px;
+}

@@ -4,7 +4,6 @@ const server = express()
 // Pegar o DB
 const db = require("./database/db")
 
-
 // Configurar pasta pública
 server.use(express.static("public"))
 
@@ -67,7 +66,7 @@ server.post("/savepoint", (req, res) => {
         if(err){
             console.log(err);
             //Criar uma modal de erro, que depois volta para a create point
-            return res.send("Erro no cadastro")
+            return res.render("create_point.html", {error: true})
         }
 
         console.log("Cadastrado com sucesso")
@@ -80,7 +79,7 @@ server.post("/savepoint", (req, res) => {
     db.run(query, values, afterInsertData)
 })
 
-
+//Botão de pesquisa vai mandar um /search
 server.get("/search", (req, res) => {
 
     const search = req.query.search
@@ -93,7 +92,8 @@ server.get("/search", (req, res) => {
     // Pegar os dados do DB
     db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows) {
         if(err){
-            return console.log(err);
+            console.log(err);
+            return res.render("index.html", {error: true})
         }
 
         const total = rows.length

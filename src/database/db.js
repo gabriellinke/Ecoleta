@@ -1,5 +1,4 @@
 // importar a dependência do SQLITE3
-
 const sqlite3 = require("sqlite3").verbose()
 
 // iniciar o objeto de db   (vai fazer as operações)

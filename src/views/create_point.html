@@ -166,6 +166,9 @@
     {% if saved %}
         {% include "partials/point-created.html" %}
     {% endif %}
+    {% if error %}
+        {% include "partials/point-create-error.html" %}
+    {% endif %}
 {% endblock modal %}
 
 {% block scripts %}

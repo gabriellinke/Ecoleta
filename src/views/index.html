@@ -52,6 +52,10 @@
 
 {% block modal %}
     {%include "partials/modal.html"%}
+    {# Se der algum erro na pesquisa #}
+    {% if error %}
+        {% include "partials/search-error.html" %}
+    {% endif %}
 {% endblock modal %}
 
 {% block scripts %}
