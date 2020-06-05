@@ -1,0 +1,23 @@
+<!-- É a div que vai ser usada para realizar a pesquisa dos pontos de coleta. A class hide vai ser usada para esconder ou fazer aparecer essa div na tela -->
+<div id="modal" class="hide">
+    <div class="content">
+        <div class="header">
+            <h1>Pontos de coleta</h1>
+            <a href="#">Fechar</a>
+        </div>
+        <!-- The action attribute specifies where to send the form-data when a form is submitted. -->
+        <form action="/search">
+            <label for="search">
+                Cidade
+            </label>
+            <!-- O atributo placeholder fica no lugar em que vai ser inserido o texto, vai servir para indicar a finalidade do campo -->
+            <div class="search field">
+                <input type="text" name="search" placeholder="Pesquise por cidade">
+                <button>
+                    <img src="/assets/search.svg" alt="Buscar">
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>

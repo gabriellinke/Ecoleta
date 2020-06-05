@@ -1,92 +1,59 @@
-<!DOCTYPE html>
-<html lang="pt_br">
+{% extends "layouts.html" %}
 
-    <head>
-        <meta charset="UTF-8">
-        <!-- Para otimizar dependendo do tamanho da tela do dispositivo -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ecoleta</title>
+{# Título está o default #}
 
-        <!-- Importar as fontes do google.fonts - esse link está na página -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+{% block styles %}
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
 
-        <!-- Utilizar o style do arquivo main.css -->
-        <link rel="stylesheet" href="/styles/main.css">
-        <link rel="stylesheet" href="/styles/home.css">
-        <link rel="stylesheet" href="/styles/modal.css">
-        <link rel="stylesheet" href="/styles/responsive.css">
-        
-    </head>
+{# id da div #}
+{% set pageId = "page-home" %}
 
-    <body>
-        
-        <!-- Cria um ID  utilizado para agrupar elementos para fins de estilos -->
-        <div id="page-home"> 
+{% block content %}
+    <!-- Classe que vai conter o conteúdo da homepage -->
+    <div class="content">
 
-            <!-- Classe que vai conter o conteúdo da homepage -->
-            <div class="content">
+        <!-- Header da página, com logo e link para cadastro -->
+        <header>
+            <!-- Utiliza a imagem da logo, para questão de acessibilidade ou de erro ao carregar a imagem, usa-se o alt para substituir a logo -->
+            <img src="/assets/logo.svg" alt="Ecoleta">
+            <!-- Link para realizar o cadastro de pontos. O span é utilizado para adicionar uma imagem antes do texto -->
+            <!-- O elemento HTML <span> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. -->
+            <!-- a tag <a> é utilizada para fazer links -->
+            <a href="/create-point">
+                <span></span>
+                Cadastre um ponto de coleta
+            </a>
+        </header>
 
-                <!-- Header da página, com logo e link para cadastro -->
-                <header>
-                    <!-- Utiliza a imagem da logo, para questão de acessibilidade ou de erro ao carregar a imagem, usa-se o alt para substituir a logo -->
-                    <img src="/assets/logo.svg" alt="Ecoleta">
-                    <!-- Link para realizar o cadastro de pontos. O span é utilizado para adicionar uma imagem antes do texto -->
-                    <!-- O elemento HTML <span> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. -->
-                    <!-- a tag <a> é utilizada para fazer links -->
-                    <a href="/create_point.html">
-                        <span></span>
-                        Cadastre um ponto de coleta
-                    </a>
-                </header>
+        <!-- Conteúdo principal da homepage -->
+        <main>
 
-                <!-- Conteúdo principal da homepage -->
-                <main>
+            <!-- Título -->
+            <!-- A h1 é uma tag HTML que indica um título. Pode ir de h1 até h6, sendo h1 o maior tamanho e h6 o menor -->
+            <h1>Seu marketplace de coleta de resíduos</h1>
 
-                    <!-- Título -->
-                    <!-- A h1 é uma tag HTML que indica um título. Pode ir de h1 até h6, sendo h1 o maior tamanho e h6 o menor -->
-                    <h1>Seu marketplace de coleta de resíduos</h1>
-        
-                    <!-- Texto -->
-                    <!--  a tag <p> representa um parágrafo do texto -->
-                    <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
-            
-                    <!-- Link para pesquisar os pontos. Utiliza <span> para a imagem e <strong> para o texto, que já fica em negrito -->
-                    <!-- a tag <strong> é muito parecida com a <bold>, porém <strong> pode ser interpretado por outros programas como leitores de páginas para surdo lendo o texto de forma diferente. -->
-                    <a href="#">
-                        <span></span>
-                        <strong>Pesquisar pontos de coleta</strong></a>
+            <!-- Texto -->
+            <!-- a tag <p> representa um parágrafo do texto -->
+            <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
 
-                </main>
+            <!-- Link para pesquisar os pontos. Utiliza <span> para a imagem e <strong> para o texto, que já fica em negrito -->
+            <!-- a tag <strong> é muito parecida com a <bold>, porém <strong> pode ser interpretado por outros programas como leitores de páginas para surdo lendo o texto de forma diferente. -->
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar pontos de coleta</strong>
+            </a>
 
-            </div>
+        </main>
 
-        </div>
+    </div>
+{% endblock content %}
 
-        <!-- É a div que vai ser usada para realizar a pesquisa dos pontos de coleta. A class hide vai ser usada para esconder ou fazer aparecer essa div na tela -->
-        <div id="modal" class="hide">
-            <div class="content">
-                <div class="header">
-                    <h1>Pontos de coleta</h1>
-                    <a href="#">Fechar</a>
-                </div>
-                <!-- The action attribute specifies where to send the form-data when a form is submitted. -->
-                <form action="/search-results.html">
-                    <label for="search">
-                        Cidade
-                    </label>
-                    <!-- O atributo placeholder fica no lugar em que vai ser inserido o texto, vai servir para indicar a finalidade do campo -->
-                    <div class="search field">
-                        <input type="text" name="search" placeholder="Pesquise por cidade">
-                        <button>
-                            <img src="/assets/search.svg" alt="Buscar">
-                        </button>
-                    </div>
-                </form>
+{% block modal %}
+    {%include "partials/modal.html"%}
+{% endblock modal %}
 
-            </div>
-        </div>
-
-        <script src="/scripts/index.js"></script>
-    </body>
-
-</html>
+{% block scripts %}
+    <script src="/scripts/index.js"></script>
+{% endblock scripts %}
