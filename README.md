@@ -18,14 +18,17 @@ O Ecoleta é um marketplace que ajuda pessoas a encontrarem pontos de coleta de 
   <img alt="Ecoleta" src="https://user-images.githubusercontent.com/51447706/88328284-9615ec00-ccfe-11ea-8411-a8ffd1ef71ff.png" width="100%">
     Figura 1: Home page.
 </p>
+<br>
 <p align="center">
   <img alt="Pontos de coleta" src="https://user-images.githubusercontent.com/51447706/88331408-48e84900-cd03-11ea-9424-9324ac7ddf0f.JPG" width="100%">
     Figura 2: Página para consultar pontos de coleta.
 </p>
+<br>
 <p align="center">
   <img alt="Formulário de cadastro" src="https://user-images.githubusercontent.com/51447706/88331552-88af3080-cd03-11ea-8a13-03bd0b474166.JPG" width="100%">
     Figura 3: Página com formulário de cadastro de pontos de coleta.
 </p>
+<br>
 
 ## 🚀 Tecnologias
 
