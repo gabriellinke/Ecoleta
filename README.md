@@ -10,6 +10,10 @@
 
 <br>
 
+## 💻 Projeto
+
+O Ecoleta é um marketplace que ajuda pessoas a encontrarem pontos de coleta de resíduos de forma eficiente. Esse projeto foi desenvolvido durante a Next Level Week #1, realizada pela Rocketseat.
+
 <p align="center">
   <img alt="Ecoleta" src="https://user-images.githubusercontent.com/51447706/88328284-9615ec00-ccfe-11ea-8411-a8ffd1ef71ff.png" width="100%">
     Figura 1: Home page.
@@ -31,10 +35,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Express](https://expressjs.com/pt-br/)
 - [SQLite](https://www.sqlite.org/index.html)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
-
-## 💻 Projeto
-
-O Ecoleta é um marketplace que ajuda pessoas a encontrarem pontos de coleta de resíduos de forma eficiente. Esse projeto foi desenvolvido durante a Next Level Week #1, realizada pela Rocketseat.
 
 ## :memo: Licença
 
