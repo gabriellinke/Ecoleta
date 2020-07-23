@@ -13,6 +13,12 @@
 <p align="center">
   <img alt="Ecoleta" src="https://user-images.githubusercontent.com/51447706/88328284-9615ec00-ccfe-11ea-8411-a8ffd1ef71ff.png" width="100%">
 </p>
+<p align="center">
+  <img alt="Pontos de coleta" src="https://user-images.githubusercontent.com/51447706/88331107-d4ada580-cd02-11ea-88d7-3d5a3409e15f.PNG" width="100%">
+</p>
+<p align="center">
+  <img alt="Formulário de cadastro" src="https://user-images.githubusercontent.com/51447706/88331172-ec852980-cd02-11ea-95c7-34fbea759c4a.PNG" width="100%">
+</p>
 
 ## 🚀 Tecnologias
 
